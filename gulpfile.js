@@ -19,7 +19,7 @@ gulp.task('reload', (done) => {
     done();
 });
 
-gulp.task('serve', () => {
+gulp.task('watch', () => {
     browserSync.init({
         server: 'build'
     });

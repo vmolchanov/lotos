@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "build": "gulp images & gulp templates & gulp styles & gulp scripts",
-        "start": "npm run build && gulp serve"
+        "start": "npm run build && gulp watch"
     },
     "author": "Vladislav Molchanov <Molchanov96@yandex.ru>",
     "license": "ISC",
