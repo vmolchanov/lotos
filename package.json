@@ -4,7 +4,7 @@
     "scripts": {
         "build": "gulp images & gulp templates & gulp styles & gulp scripts",
         "start": "npm run build && gulp watch",
-        "deploy": "rm -rf node_modules/gh-pages/.cache && gh-pages -d build"
+        "deploy": "rm -rf node_modules/gh-pages/.cache && gh-pages -d build -b master"
     },
     "author": "Vladislav Molchanov <Molchanov96@yandex.ru>",
     "license": "ISC",
