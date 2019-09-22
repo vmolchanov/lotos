@@ -25,6 +25,6 @@ gulp.task('watch', () => {
     });
 
     gulp.watch('./src/templates/**/*.jade', gulp.series('templates', 'reload'));
-    gulp.watch('./src/scss/**/*.scss', gulp.series('styles', 'reload'));
-    gulp.watch('./src/js/**/*.js', gulp.series('scripts', 'reload'));
+    gulp.watch('./src/styles/**/*.scss', gulp.series('styles', 'reload'));
+    gulp.watch('./src/scripts/**/*.js', gulp.series('scripts', 'reload'));
 });
