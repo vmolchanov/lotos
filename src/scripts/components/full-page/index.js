@@ -24,7 +24,7 @@ class FullPage {
 
     init() {
         this._stretchSlides();
-        this._container.addEventListener('wheel', this._onWindowScroll);
+        this._container.addEventListener('wheel', this._onContainerScroll);
         window.addEventListener('resize', this._onWindowResize);
     }
 
@@ -67,8 +67,8 @@ class FullPage {
             ESliderDirection.UP;
         const step = 100;
         const {length: slidesLength} = this._slides;
-        const oneVhToPixels = window.innerHeight / 100;
-        const containerHeightInVh = parseInt(this._container.offsetHeight / oneVhToPixels);
+        const oneVhInPixels = window.innerHeight / 100;
+        const containerHeightInVh = parseInt(this._container.offsetHeight / oneVhInPixels);
         const slideBeforeLastY = containerHeightInVh - containerHeightInVh / slidesLength;
         let translateY = parseInt(this._container.style.transform.replace('translateY(', ''));
 
