@@ -1,0 +1,19 @@
+.main-header {
+    @include row;
+    @include eq-padding(2);
+    @include vertical-paddings(m);
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 1;
+}
+
+.main-header__menu {
+    @include column(16, 32);
+}
+
+.main-header__logo {
+    @include column(16, 32);
+    text-align: right;
+}

@@ -1,0 +1,10 @@
+- var socials = [];
+- socials.push({name: 'VK', href: 'https://vk.com'});
+- socials.push({name: 'FB', href: 'https://facebook.com'});
+- socials.push({name: 'INST', href: 'https://instagram.com'});
+
+footer.main-footer
+    ul.main-footer__social-list
+        each social, index in socials
+            li.main-footer__social-item
+                a(href= social.href)= social.name

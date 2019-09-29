@@ -1,0 +1,41 @@
+.main-block {
+    @include eq-padding(2);
+    height: 100%;
+}
+
+.main-block__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    max-height: 600px;
+}
+
+.main-block__image {
+    text-align: center;
+}
+
+.main-block__logo {
+    img {
+        width: 100%;
+        max-width: 336px;
+        height: auto;
+    }
+}
+
+.main-block__sign-up {
+    @include row;
+    align-items: center;
+}
+
+.main-block__sign-up-button {
+    @include column(7, 32);
+}
+
+.main-block__sign-up-text {
+    @include column(25, 32);
+    font-family: 'Geometria', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 300;   
+    line-height: 25px;
+}

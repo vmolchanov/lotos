@@ -1,0 +1,22 @@
+include ../mixins/small-button
+
+.main-block
+    h1.visually-hidden Центр йоги Lotos
+
+    .main-block__content
+        .main-block__image
+            img(
+                src="img/persons/1.png",
+                width="201",
+                height="300")
+        div
+            .main-block__logo
+                img(
+                    src="img/main-block-logo.png",
+                    width="336",
+                    height="93",
+                    alt="Центр йоги Lotos")
+            .main-block__sign-up
+                .main-block__sign-up-button
+                    +small-button("../img/plus.svg", "Записаться")
+                p.main-block__sign-up-text Приглашаем вас и ваших друзей на бесплатное пробное занятие

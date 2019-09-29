@@ -1,0 +1,126 @@
+$indents: (
+    xl: 40px,
+    l : 20px,
+    m : 10px,
+    s : 7px,
+    xs: 3px
+);
+
+@function getIndent($indent) {
+    @if $indent == 0 {
+        @return 0;
+    }
+    @else if map-has-key($indents, $indent) {
+        @return #{map-get($indents, $indent)};
+    }
+    @else {
+        @warn 'Неправильный размер отступа!';
+        @return 0;
+    }
+}
+
+@mixin vertical-mt($indent) {
+    margin-top: getIndent($indent);
+}
+
+@mixin vertical-mb($indent) {
+    margin-bottom: getIndent($indent);
+}
+
+@mixin vertical-pt($indent) {
+    padding-top: getIndent($indent);
+}
+
+@mixin vertical-pb($indent) {
+    padding-bottom: getIndent($indent);
+}
+
+@mixin vertical-margins($indent) {
+    @include vertical-mt($indent);
+    @include vertical-mb($indent);
+}
+
+@mixin vertical-paddings($indent) {
+    @include vertical-pt($indent);
+    @include vertical-pb($indent);
+}
+
+.mt-xl {
+    @include vertical-mt(xl);
+}
+
+.mt-l {
+    @include vertical-mt(l);
+}
+
+.mt-m {
+    @include vertical-mt(m);
+}
+
+.mt-s {
+    @include vertical-mt(s);
+}
+
+.mt-xs {
+    @include vertical-mt(xs);
+}
+
+.mb-xl {
+    @include vertical-mb(xl);
+}
+
+.mb-l {
+    @include vertical-mb(l);
+}
+
+.mb-m {
+    @include vertical-mb(m);
+}
+
+.mb-s {
+    @include vertical-mb(s);
+}
+
+.mb-xs {
+    @include vertical-mb(xs);
+}
+
+.pt-xl {
+    @include vertical-pt(xl);
+}
+
+.pt-l {
+    @include vertical-pt(l);
+}
+
+.pt-m {
+    @include vertical-pt(m);
+}
+
+.pt-s {
+    @include vertical-pt(s);
+}
+
+.pt-xs {
+    @include vertical-pt(xs);
+}
+
+.pb-xl {
+    @include vertical-pb(xl);
+}
+
+.pb-l {
+    @include vertical-pb(l);
+}
+
+.pb-m {
+    @include vertical-pb(m);
+}
+
+.pb-s {
+    @include vertical-pb(s);
+}
+
+.pb-xs {
+    @include vertical-pb(xs);
+}

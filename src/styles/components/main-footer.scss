@@ -1,0 +1,30 @@
+.main-footer {
+    @include eq-padding(2);
+    @include vertical-paddings(m);
+    @include row;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    height: 50px;
+}
+
+.main-footer__social-list {
+    @include vertical-margins(0);
+    @include pl(0);
+    @include row;
+    @include column(12, 32);
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.main-footer__social-item {
+    font-size: 10px;
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+}

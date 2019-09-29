@@ -14,6 +14,12 @@ gulp.task('styles', styles);
 
 gulp.task('images', images);
 
+gulp.task('fonts', () => {
+    return gulp
+        .src('src/fonts/**/*.*')
+        .pipe(gulp.dest('build/fonts'));
+});
+
 gulp.task('reload', (done) => {
     browserSync.reload();
     done();
@@ -27,4 +33,5 @@ gulp.task('watch', () => {
     gulp.watch('./src/templates/**/*.jade', gulp.series('templates', 'reload'));
     gulp.watch('./src/styles/**/*.scss', gulp.series('styles', 'reload'));
     gulp.watch('./src/scripts/**/*.js', gulp.series('scripts', 'reload'));
+    gulp.watch('./src/img/**/*.*', gulp.series('images', 'reload'));
 });

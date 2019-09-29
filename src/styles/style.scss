@@ -1,1 +1,15 @@
 @import './basic';
+
+@import './grid';
+@import './vertical-indent';
+
+// components
+@import './components/main-header';
+@import './components/main-footer';
+@import './components/main-menu';
+@import './components/full-page';
+@import './components/visually-hidden';
+@import './components/main-block';
+@import './components/small-button';
+@import './components/long-button';
+@import './components/burger-button';

@@ -1,0 +1,28 @@
+.burger-button {
+    @include row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    border: none;
+    background: none;
+
+    rect {
+        transition: all 0.3s;
+    }
+}
+
+.burger-button_close {
+    .burger-button__point,
+    .burger-button__bottom-line {
+        display: none;
+    }
+
+    .burger-button__middle-line {
+        transform: rotate(45deg) translateY(-11px);
+    }
+
+    .burger-button__top-line {
+        transform: rotate(-45deg) translate(-11px, 13px);
+    }
+}

@@ -12,11 +12,11 @@ class FullPage {
         document.body.style.overflow = 'hidden';
 
         this._duration = 1000;
+        this._isHold = false;
 
         this._container.style.transform = 'translateY(0)';
         this._container.style.transition = `${this._duration}ms cubic-bezier(0.5, 0, 0.5, 1)`;
 
-        this._isHold = false;
 
         this._onWindowResize = this._onWindowResize.bind(this);
         this._onContainerScroll = this._onContainerScroll.bind(this);

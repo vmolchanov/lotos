@@ -1,29 +1,17 @@
 const gulp = require('gulp');
 const jade = require('gulp-jade');
-const changed = require('gulp-changed');
 const prettify = require('gulp-prettify');
 const typograf = require('gulp-typograf');
 const browserSync = require('./browser-sync');
 
-// module.exports = () => {
-//     const locals = {};
- 
-//     return gulp
-//         .src('src/templates/**/*.jade')
-//         .pipe(jade({
-//             locals
-//         }))
-//         .pipe(gulp.dest('./build'));
-// };
-
 module.exports = () => {
     return gulp
         .src('src/templates/**/*.jade')
-        .pipe(changed('build', {extension: '.html'}))
         .pipe(jade({
             pretty: true
         }))
         .on('error', function(e) {
+            console.log(`Error: ${e}`);
             console.log(`Filename: ${e.filename}`);
             console.log(`Message: ${e.msg}`);
             console.log(`Path: ${e.message}`);
@@ -40,5 +28,4 @@ module.exports = () => {
         }))
         .pipe(gulp.dest('build'))
         .pipe(browserSync.stream());
-        // .pipe(browserSync.stream());
 };

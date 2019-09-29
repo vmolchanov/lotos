@@ -1,0 +1,14 @@
+- var items = [];
+- items.push('Главная');
+- items.push('Направления');
+- items.push('Преподаватели');
+- items.push('Абонементы');
+- items.push('Расписание');
+- items.push('Отзывы');
+- items.push('Контакты');
+
+nav.main-menu.visually-hidden
+    ul.main-menu__list
+        for item in items
+            li.main-menu__item
+                a(href="#").main-menu__link= item

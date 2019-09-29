@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.625" height="22.625" viewBox="0 0 22.625 22.625">
+    <path
+        fill="#f78e6a"
+        fill-rule="evenodd"
+        d="M41.9,15.686L43.314,17.1,22.1,38.314,20.686,36.9Z"
+        transform="translate(-20.688 -15.688)"/>
+    <path
+        fill="#f78e6a"
+        fill-rule="evenodd"
+        d="M22.1,15.686L43.314,36.9,41.9,38.314,20.686,17.1Z"
+        transform="translate(-20.688 -15.688)"/>
+</svg>
